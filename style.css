@@ -38,16 +38,101 @@
     :root {
         --bg-element: #ffffff10;
         --color-element: #ffffff;
+        --width: 1328px;
+    }
+
+    body {
+        background-color: #000000;
+        max-width: var(--width);
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-family: var(--font-accent);
+        text-decoration: none;
+        color: var(--main-color);
+        font-size: 24px;
+    }
+
+    header {
+        align-items: center;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #00000001;
+        backdrop-filter: blur(160px);
+        z-index: 1001;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        max-width: var(--width);
+        margin: auto;
+    }
+
+    .logoAndNav {
+        display: flex;
+        align-items: center;
+        gap: 80px
+    }
+
+    nav {
+        display: flex;
+        gap: 20px
+    }
+
+    nav > a {
+        font-family: var(--font-default);
+        text-decoration: none;
+        color: #aeaeae
+    }
+
+    nav > a:hover {
+        color: white;
+    }
+
+    .doEffect {
+        height: 40px;
+        background: var(--main-color);
+        border: 0;
+        border-radius: 5px;
+        outline: 0;
+        padding: 0 40px;
+        color: white;
+        font-weight: 500;
+        font-family: var(--font-default);
+    }
+
+    .doEffect:hover {
+        border-radius: 40px;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
     }
 
     @media (min-width: 1728px) {
-        :root {
-            --width: 1328px;
+
+
+
+    }
+
+    @media (max-width: 748px) {
+
+        nav {
+            display: none;
         }
 
-        body {
-            max-width: var(--width);
-            margin: auto;
+        header > .doEffect {
+            display: none;
         }
+
+        .menu {
+            display: unset;
+        }
+
     }
 }
