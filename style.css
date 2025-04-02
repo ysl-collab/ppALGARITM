@@ -114,11 +114,77 @@
         display: none;
     }
 
-    @media (min-width: 1728px) {
+    main {
+        padding: 240px 0;
+    }
 
 
+    .welcome {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .welcome > h1 {
+        font-family: var(--font-accent);
+        font-size: 64px;
+        color: #ffffff;
+        text-align: center;
+        z-index: 0;
+        animation: toBottom 4s;
+    }
+
+    .glass1 {
+        width: 233px;
+        position: absolute;
+        left: 0;
+        animation: toBottom 2s;
+    }
+    .glass2 {
+        width: 347px;
+        position: absolute;
+        z-index: -1;
+        animation: toBottom 3s;
 
     }
+    .glass3 {
+        width: 321px;
+        position: absolute;
+        right: 0;
+        animation: toBottom 2.5s;
+    }
+
+    @keyframes toBottom {
+        from {
+            translate: 0 -200px;
+            opacity: 0;
+        }
+        to {
+            translate: 0;
+        }
+    }
+
+    @media (max-width: 1117px) {
+        .welcome {
+            display: flex;
+            justify-self: center;
+        }
+        .welcome > h1 {
+            text-align: left;
+        }
+        .glass1 {
+            left: unset
+        }
+        .glass2 {
+            display: none;
+        }
+
+        .glass3 {
+            display: none;
+        }
+    }
+
 
     @media (max-width: 748px) {
 
@@ -134,5 +200,11 @@
             display: unset;
         }
 
+    }
+    
+    @media (max-width: 702px) {
+        .welcome > h1 {
+            font-size: 36px;
+        }
     }
 }
