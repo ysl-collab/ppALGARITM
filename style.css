@@ -168,6 +168,23 @@
         animation: toBottom 2.5s;
     }
 
+    .getCert {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .getCert > img {
+        width: 398px;
+    }
+
+    .getCert > h1 {
+        font-family: var(--font-accent);
+        color: var(--color-element);
+        font-size: 48px;
+    }
+
     @keyframes toBottom {
         from {
             translate: 0 -200px;
