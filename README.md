@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/595fc6e3-ab87-4abf-84e9-8f388318bdeb)
+![image](https://github.com/user-attachments/assets/37c40ea9-bd4f-459c-8a2b-d88f898a823a)
 
 # ЦМИТ "АЛГАритм" - Центр молодежного инновационного творчества
 
