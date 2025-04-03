@@ -122,3 +122,14 @@ const openMenu = document.getElementById("openMenu")
 openMenu.addEventListener("click", function () {
     document.getElementById("modalMenu").style.display = "flex"
 })
+
+const agreeCookie = document.getElementById("agreeCookie")
+
+agreeCookie.addEventListener("click", function () {
+    localStorage.setItem("cookie", "ok");
+    document.getElementById("modalCookie").style.display = "none"
+})
+
+if (localStorage.getItem("cookie") === "ok") {
+    document.getElementById("modalCookie").style.display = "none"
+}

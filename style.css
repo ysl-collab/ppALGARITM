@@ -116,6 +116,37 @@
         font-family: var(--font-default);
     }
 
+    #modalCookie {
+        font-family: var(--font-default);
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        z-index: 1001;
+        background: var(--bg-element);
+        padding: 20px;
+        border-radius: 10px;
+        gap: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    #modalCookie > button {
+        height: 40px;
+        background: var(--main-color);
+        border: 0;
+        border-radius: 5px;
+        outline: 0;
+        padding: 0 20px;
+        color: white;
+        font-weight: 500;
+        font-family: var(--font-default);
+    }
+    
+    #modalCookie > button:hover {
+        cursor: pointer;
+    }
+
     .doEffect:hover {
         border-radius: 40px;
         cursor: pointer;
