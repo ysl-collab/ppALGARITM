@@ -374,7 +374,7 @@
 
     #modalWindow {
         position: fixed;
-        top: 80px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
@@ -559,6 +559,530 @@
 
     }
     
+    @media (max-width: 702px) {
+        .welcome > h1 {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    :root {
+        --bg-element: #00000020;
+        --color-element: #000000;
+        --width: 1328px;
+    }
+
+    body {
+        background-color: #ffffff;
+        max-width: var(--width);
+        margin: auto;
+    }
+
+    .logo {
+        font-family: var(--font-accent);
+        text-decoration: none;
+        color: var(--main-color);
+        font-size: 24px;
+    }
+
+    header {
+        align-items: center;
+        height: 80px;
+        padding: 0 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #00000001;
+        backdrop-filter: blur(160px);
+        z-index: 1001;
+        display: flex;
+        justify-content: space-between;
+        max-width: var(--width);
+        margin: auto;
+    }
+
+    .logoAndNav {
+        display: flex;
+        align-items: center;
+        gap: 80px
+    }
+
+    nav {
+        display: flex;
+        gap: 20px
+    }
+
+    nav > a {
+        font-family: var(--font-default);
+        text-decoration: none;
+        color: #686868
+    }
+
+    nav > a:hover {
+        color: black;
+    }
+
+    .doEffect {
+        height: 40px;
+        background: var(--main-color);
+        border: 0;
+        border-radius: 5px;
+        outline: 0;
+        padding: 0 40px;
+        color: white;
+        font-weight: 500;
+        font-family: var(--font-default);
+    }
+
+    .doEffect:hover {
+        border-radius: 40px;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    main {
+        padding: 160px 0;
+    }
+
+
+    .welcome {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 466px;
+    }
+
+    .welcome > h1 {
+        font-family: var(--font-accent);
+        font-size: 64px;
+        color: #ffffff;
+        mix-blend-mode: difference;
+        text-align: center;
+        z-index: 0;
+        animation: toBottom 4s;
+    }
+
+    .glass1 {
+        width: 233px;
+        position: absolute;
+        left: 0;
+        animation: toBottom 2s;
+    }
+    .glass2 {
+        width: 347px;
+        position: absolute;
+        z-index: -1;
+        animation: toBottom 3s;
+
+    }
+    .glass3 {
+        width: 321px;
+        position: absolute;
+        right: 0;
+        animation: toBottom 2.5s;
+    }
+
+    .getCert {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .getCert > img {
+        width: 398px;
+    }
+
+    .getCert > h1 {
+        font-family: var(--font-accent);
+        color: var(--color-element);
+        font-size: 48px;
+    }
+
+    @keyframes toBottom {
+        from {
+            translate: 0 -200px;
+            opacity: 0;
+        }
+        to {
+            translate: 0;
+        }
+    }
+
+    .aboutComp {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 45%);
+        color: black;
+        padding: 80px 0;
+        gap: 40px;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        font-family: var(--font-default);
+    }
+
+    .contacts > h1 {
+        font-family: var(--font-accent);
+    }
+
+
+    .infoContact {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .infoContact > div {
+        display: grid;
+        grid-template-columns: 200px auto;
+    }
+
+    .infoContact > div > a {
+        color: var(--main-color);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .about > h1 {
+        font-family: var(--font-accent);
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about > p {
+        font-family: var(--font-default);
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .links > a {
+        width: 100%;
+        background: var(--bg-element);
+        padding: 8px 0;
+        display: flex;
+        justify-content: center;
+        color: var(--color-element);
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .links > a:hover {
+        background: #aeaeae;
+        border-radius: 40px;
+    }
+
+    .course {
+        display: flex;
+        padding: 80px 0;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    h1 {
+        color: var(--color-element);
+        font-family: var(--font-accent);
+        font-size: 36px;
+    }
+
+    .cards {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: auto auto;
+    }
+
+    .card {
+        color: white;
+        background: var(--bg-element);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-radius: 10px;
+        gap: 40px;
+        max-width: 644px;
+        padding: 40px;
+    }
+
+    .title {
+        font-family: var(--font-accent);
+        display: flex;
+        color: var(--color-element);
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .age {
+        color: #686868;
+        font-size: 36px;
+    }
+
+    .nameCourse {
+        font-size: 24px;
+    }
+
+    .description {
+        font-family: var(--font-default);
+        color: var(--color-element);
+    }
+
+    .parameters {
+        color: var(--main-color);
+        font-family: var(--font-accent);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer {
+        background: var(--main-color);
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    footer > .logo {
+        color: white;
+    }
+
+    .footerCont {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .linksFooter {
+        display: flex;
+        gap: 80px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: white;
+    }
+
+    .nav > h3 {
+        font-family: var(--font-accent);
+    }
+
+    .link > a {
+        font-family: var(--font-default);
+        color: white;
+    }
+
+    #modalWindow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 40px;
+        background: #00000001;
+        backdrop-filter: blur(160px);
+        z-index: 1002;
+        overflow-y: auto;
+        color: var(--color-element);
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .titleModal {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #modalWindow > .titleModal > h2 {
+        font-size: 36px;
+        font-family: var(--font-accent);
+    }
+
+    #close {
+        position: relative;
+    }
+
+    #close:hover {
+        cursor: pointer;
+    }
+
+    #close:hover > .path > path {
+        stroke: white
+    }
+
+    label {
+        font-family: var(--font-default);
+        display: flex;
+        flex-direction: column;
+    }
+
+    select {
+        padding: 10px;
+        border-radius: 5px;
+        border: 0;
+        outline: 0;
+        font-family: var(--font-default);
+    }
+
+    input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 0;
+        outline: 0;
+        font-family: var(--font-default);
+    }
+
+    #getResult {
+        height: 40px;
+        background: var(--main-color);
+        border: 0;
+        border-radius: 5px;
+        outline: 0;
+        padding: 0 40px;
+        color: white;
+        font-weight: 500;
+        font-family: var(--font-default);
+    }
+
+    #getResult:hover {
+        cursor: pointer;
+        border-radius: 80px;
+    }
+
+    #modalMenu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        gap: 20px;
+        top: 80px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1001;
+        background: #00000001;
+        backdrop-filter: blur(160px);
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    #closeMenu {
+        color: white;
+        font-family: var(--font-default);
+        text-decoration: underline;
+    }
+
+    #closeMenu:hover {
+        cursor: pointer;
+    }
+
+    #modalMenu > nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+
+    @media (max-width: 1284px) {
+        .aboutComp {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+    }
+
+    @media (max-width: 1117px) {
+        .welcome {
+            display: flex;
+            justify-self: center;
+        }
+        .welcome > h1 {
+            text-align: left;
+        }
+        .glass1 {
+            left: unset
+        }
+        .glass2 {
+            display: none;
+        }
+
+        .glass3 {
+            display: none;
+        }
+    }
+
+    @media (max-width: 924px) {
+        .nav:first-child {
+            display: none;
+        }
+    }
+
+
+    @media (max-width: 748px) {
+
+        nav {
+            display: none;
+        }
+
+        header > .doEffect {
+            display: none;
+        }
+        body {
+            padding: 0 20px;
+        }
+
+        .age {
+            font-size: 20px;
+        }
+
+        .menu {
+            display: unset;
+        }
+
+        .cards {
+            width: 100%;
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        .title > .nameCourse {
+            font-size: 16px;
+        }
+
+        .getCert > h1 {
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+    }
+
     @media (max-width: 702px) {
         .welcome > h1 {
             font-size: 36px;
