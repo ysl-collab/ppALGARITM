@@ -91,3 +91,34 @@ window.onload = function () {
     })
 }
 
+const doEffect = document.querySelectorAll(".doEffect")
+const courseName = document.getElementById("nameCourse")
+const closeDoEffect = document.getElementById("close")
+
+closeDoEffect.addEventListener("click", function () {
+    document.getElementById("modalWindow").style.display = "none"
+})
+
+courseRaw.forEach((course) => {
+    courseName.innerHTML += `
+        <option value="${courseRaw.indexOf(course)}">${course.title}</option>
+    `
+})
+
+doEffect.forEach((btn) => {
+    btn.addEventListener("click", function () {
+        document.getElementById("modalWindow").style.display = "flex"
+    })
+})
+
+const closeMenu = document.getElementById("closeMenu")
+
+closeMenu.addEventListener("click", function () {
+    document.getElementById("modalMenu").style.display = "none"
+})
+
+const openMenu = document.getElementById("openMenu")
+
+openMenu.addEventListener("click", function () {
+    document.getElementById("modalMenu").style.display = "flex"
+})

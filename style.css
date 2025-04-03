@@ -372,6 +372,118 @@
         color: white;
     }
 
+    #modalWindow {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 40px;
+        background: #00000001;
+        backdrop-filter: blur(160px);
+        z-index: 1001;
+        overflow-y: auto;
+        color: var(--color-element);
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .titleModal {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #modalWindow > .titleModal > h2 {
+        font-size: 36px;
+        font-family: var(--font-accent);
+    }
+
+    #close {
+        position: relative;
+    }
+    
+    #close:hover {
+        cursor: pointer;
+    }
+
+    #close:hover > .path > path {
+        stroke: white
+    }
+
+    label {
+        font-family: var(--font-default);
+        display: flex;
+        flex-direction: column;
+    }
+
+    select {
+        padding: 10px;
+        border-radius: 5px;
+        border: 0;
+        outline: 0;
+        font-family: var(--font-default);
+    }
+
+    input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 0;
+        outline: 0;
+        font-family: var(--font-default);
+    }
+
+    #getResult {
+        height: 40px;
+        background: var(--main-color);
+        border: 0;
+        border-radius: 5px;
+        outline: 0;
+        padding: 0 40px;
+        color: white;
+        font-weight: 500;
+        font-family: var(--font-default);
+    }
+
+    #getResult:hover {
+        cursor: pointer;
+        border-radius: 80px;
+    }
+
+    #modalMenu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        gap: 20px;
+        top: 80px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1001;
+        background: #00000001;
+        backdrop-filter: blur(160px);
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    #closeMenu {
+        color: white;
+        font-family: var(--font-default);
+        text-decoration: underline;
+    }
+    
+    #closeMenu:hover {
+        cursor: pointer;
+    }
+
+    #modalMenu > nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
 
     @media (max-width: 1284px) {
         .aboutComp {
