@@ -327,6 +327,51 @@
         gap: 10px;
     }
 
+    footer {
+        background: var(--main-color);
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    footer > .logo {
+        color: white;
+    }
+
+    .footerCont {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .linksFooter {
+        display: flex;
+        gap: 80px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: white;
+    }
+
+    .nav > h3 {
+        font-family: var(--font-accent);
+    }
+
+    .link > a {
+        font-family: var(--font-default);
+        color: white;
+    }
+
 
     @media (max-width: 1284px) {
         .aboutComp {
@@ -356,6 +401,12 @@
         }
     }
 
+    @media (max-width: 924px) {
+        .nav:first-child {
+            display: none;
+        }
+    }
+
 
     @media (max-width: 748px) {
 
@@ -366,6 +417,13 @@
         header > .doEffect {
             display: none;
         }
+        body {
+            padding: 0 20px;
+        }
+
+        .age {
+            font-size: 20px;
+        }
 
         .menu {
             display: unset;
@@ -375,6 +433,16 @@
             width: 100%;
             grid-template-columns: 1fr;
             justify-items: center;
+        }
+
+        .title > .nameCourse {
+            font-size: 16px;
+        }
+
+        .getCert > h1 {
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
         }
 
     }
