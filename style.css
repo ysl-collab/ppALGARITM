@@ -20,12 +20,24 @@
     margin: 0;
     box-sizing: border-box;
     transition: all .2s ease-out;
+    user-select: none;
 }
 
 :root {
     --main-color: #0069FF;
     --font-accent: "Druk Wide Cyr";
     --font-default: "Onest", sans-serif;
+}
+
+::-webkit-scrollbar {
+    background: unset;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 20px;
+
 }
 
 
@@ -115,7 +127,7 @@
     }
 
     main {
-        padding: 240px 0;
+        padding: 160px 0;
     }
 
 
@@ -124,6 +136,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 466px;
     }
 
     .welcome > h1 {
@@ -162,6 +175,87 @@
         }
         to {
             translate: 0;
+        }
+    }
+
+    .aboutComp {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 45%);
+        color: white;
+        padding: 80px 0;
+        gap: 40px;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        font-family: var(--font-default);
+    }
+
+    .contacts > h1 {
+        font-family: var(--font-accent);
+    }
+
+
+    .infoContact {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .infoContact > div {
+        display: grid;
+        grid-template-columns: 200px auto;
+    }
+
+    .infoContact > div > a {
+        color: var(--main-color);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .about > h1 {
+        font-family: var(--font-accent);
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about > p {
+        font-family: var(--font-default);
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .links > a {
+        width: 100%;
+        background: var(--bg-element);
+        padding: 8px 0;
+        display: flex;
+        justify-content: center;
+        color: var(--color-element);
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .links > a:hover {
+        background: #343434;
+        border-radius: 40px;
+    }
+
+    @media (max-width: 1284px) {
+        .aboutComp {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
         }
     }
 
